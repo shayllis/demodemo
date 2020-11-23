@@ -81,8 +81,8 @@ Copie o Access Token para reutilizar nas demais requisições
 ### Criando uma transferência
 POST {HOST}/api/transactions
 {
-    "amount": "1.00",
-    "user_id": 2
+    "value": "1.00",
+    "payee": 2
 }
 Response {
     "success": true,
@@ -100,6 +100,7 @@ Response {
     },
     "message": "Transaction has been created successfully."
 }
+Nota: A estrutura foi modificada, por segurança o "payer" será definido pelo usuário dono do Token em uso.
 
 ### Listando transferências
 GET {HOST}/api/transactions
@@ -131,3 +132,4 @@ Nota: No mundo real seria feito em micro serviço agendado via client.
 1. Note que a lista apresenta o UUID, evitando export o id real da transação
 1. As requisições feitas para "APIs" externas têm prevenção de erro
 1. É possível reverter a operação usando status. Porém não foi implementada.
+1. Testes nesse momento são feitos manualmente via Postman
