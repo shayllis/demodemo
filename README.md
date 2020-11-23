@@ -44,6 +44,7 @@ $ php artisan migrate:fresh
 $ php artisan passport:install --uuids
 $ php artisan migrate
 $ php artisan db:seed --class=DatabaseSeeder
+$ php artisan serve
 ```
 
 Configure o arquivo ".env". Use o arquivo ".env.exemple" como exemplo.
