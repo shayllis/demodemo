@@ -139,6 +139,12 @@ GET {HOST}/api/transactions
 Notificações são enviadas através de um worker que é executado a cada 5 minutos.
 **Nota**: No mundo real seria feito em micro serviço agendado via client.
 
+### Sugestão de melhorias:
+* Adicionar lista de contatos e transacionar pelo código do contato (evitar expor ids ou dados pessoais)
+* Utilizar dados do token para transacionar, ao invés de receber do cliente seu próprio código
+* Armazenar dados de sessão e tarefas agendadas em Redis
+* Integrar serviço de Log com StackOverflow e/ou outro serviço mensageiro de um responsável do time de dev
+
 ### Considerações
 1. CPF e CPNJ são compreendidos como documento (document) na base de dados
 1. Note que a lista apresenta o UUID, evitando export o id real da transação
