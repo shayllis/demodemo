@@ -7,7 +7,7 @@ Laravel Passport
 Laravel Queue
 MySQL 8
 
-Justificativa:
+### Justificativa das escolhas
 Laravel é hoje um dos frameworks PHP mais utilizados do mundo, assim como MySQL é também um dos bancos relacionais mais utilizados. Além disso, este framework fornece complemento de autenticação (Passaport - OAuth 2.0), e agendador de serviços.
 Este projeto não apresenta front-end, apenas API.
 Link para outros projetos com front-end:
@@ -128,4 +128,6 @@ Nota: No mundo real seria feito em micro serviço agendado via client.
 
 ### Considerações
 1. CPF e CPNJ são compreendidos como documento (document) na base de dados
-2. Note que a lista apresenta o UUID, evitando export o id real da transação
+1. Note que a lista apresenta o UUID, evitando export o id real da transação
+1. As requisições feitas para "APIs" externas têm prevenção de erro
+1. É possível reverter a operação usando status. Porém não foi implementada.
